@@ -11,11 +11,17 @@ sql_create_table = '''
         year_of_production INTEGER NULL
     );
 '''
+# Brisanje tablice
+sql_drop_table = '''
+    DROP TABLE IF EXISTS pano
+'''
+
 
 try:
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
-        cursor.execute(sql_create_table)
+        # cursor.execute(sql_create_table)
+        cursor.execute(sql_drop_table)
 
 except Exception as ex:
     print(f'Dogodila se greska {ex}!')
