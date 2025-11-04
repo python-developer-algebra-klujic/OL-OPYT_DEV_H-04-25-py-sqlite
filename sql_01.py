@@ -2,7 +2,7 @@
 import sqlite3
 
 # 2. KORAK - Kreirati konekciju na bazu
-conn = sqlite3.connect('pyano.db')
+conn = sqlite3.connect('data_store/pyano.db')
 
 # 4. KORAK - Kreirati konekciju na bazu
 cursor = conn.cursor()
